@@ -6,11 +6,17 @@
 /*   By: joelozan <joelozan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:53:24 by joelozan          #+#    #+#             */
-/*   Updated: 2024/04/16 19:09:50 by joelozan         ###   ########.fr       */
+/*   Updated: 2024/04/18 19:59:27 by joelozan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../hdr/push_swap.h"
+
+static void	ft_error(char *msg)
+{
+	ft_putendl_fd(msg, 1);
+	exit(0);
+}
 
 static int	is_dup(int num, char **argv, int i)
 {

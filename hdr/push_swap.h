@@ -6,7 +6,7 @@
 /*   By: joelozan <joelozan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 19:54:15 by joelozan          #+#    #+#             */
-/*   Updated: 2024/04/16 19:39:00 by joelozan         ###   ########.fr       */
+/*   Updated: 2024/04/18 20:18:37 by joelozan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,14 @@ void	rra(t_stack **stack);
 void	rrb(t_stack **stack);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
 void	radix_sort(t_stack **stack_a, t_stack **stack_b);
+void	sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 void	check_args(int ac, char **av);
-void	ft_error(char *msg);
 void	ft_free(char **str);
 int		is_sorted(t_stack **stack);
+void	sa_rra(t_stack **stack);
+void	ra_sa_rra(t_stack **stack);
+int		get_distance(t_stack **stack, int index);
 
 int		ft_isdigit(int n);
 char	**ft_split(const char *s, char c);

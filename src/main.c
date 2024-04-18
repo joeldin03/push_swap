@@ -6,7 +6,7 @@
 /*   By: joelozan <joelozan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:45:15 by joelozan          #+#    #+#             */
-/*   Updated: 2024/04/16 19:09:11 by joelozan         ###   ########.fr       */
+/*   Updated: 2024/04/18 19:22:04 by joelozan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	main(int ac, char **av)
 	t_stack	**stack_a;
 	t_stack	**stack_b;
 
-	if (ac > 2)
+	if (ac < 2)
 		return (-1);
 	check_args(ac, av);
 	stack_a = malloc(sizeof(t_stack));
@@ -95,7 +95,7 @@ int	main(int ac, char **av)
 		free(stack_b);
 		return (0);
 	}
-	radix_sort(stack_a, stack_b);
+	sort_stack(stack_a, stack_b);
 	free(stack_a);
 	free(stack_b);
 	return (0);

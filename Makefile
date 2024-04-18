@@ -6,15 +6,27 @@
 #    By: joelozan <joelozan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 18:49:14 by joelozan          #+#    #+#              #
-#    Updated: 2024/04/16 19:33:16 by joelozan         ###   ########.fr        #
+#    Updated: 2024/04/18 20:19:51 by joelozan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	= push_swap
+NAME 	= 	push_swap
 
-SRCS 	=  $(wildcard src/*.c utils/*.c libft/*.c)
+SRCS =	src/main.c \
+		src/o_push.c \
+		src/o_rotate.c \
+		src/o_rrotate.c \
+		src/o_swap.c \
+		src/radix.c \
+		src/sort.c \
+		utils/check_args.c \
+		utils/utils.c \
+		libft/ft_atoi.c \
+		libft/ft_lst.c \
+		libft/ft_putendl_fd.c \
+		libft/ft_split.c
 
-OBJS 	= ${SRCS:.c=.o}
+OBJS = $(SRCS:.c=.o)
 
 CC 		= gcc
 CFLAGS 	= -Wall -Wextra -Werror -Iincludes

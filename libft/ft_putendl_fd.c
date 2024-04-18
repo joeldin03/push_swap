@@ -6,24 +6,33 @@
 /*   By: joelozan <joelozan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 17:34:33 by joelozan          #+#    #+#             */
-/*   Updated: 2024/04/16 19:40:06 by joelozan         ###   ########.fr       */
+/*   Updated: 2024/04/18 20:18:11 by joelozan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../hdr/push_swap.h"
 
-static size_t	ft_strlen(const char *str)
+static void	ft_putstr_fd(const char *str, int fd)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (str[i])
-		i++;
-	return (i);
+	{
+		write(fd, &str[i++], 1);
+	}
 }
 
-void	ft_putendl_fd(char *s, int fd)
+static void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, s, ft_strlen(s));
-	write(fd, "\n", 1);
+	write(fd, &c, sizeof(c));
+}
+
+void	ft_putendl_fd(char *str, int fd)
+{
+	if (str)
+	{
+		ft_putstr_fd(str, fd);
+		ft_putchar_fd('\n', fd);
+	}
 }
