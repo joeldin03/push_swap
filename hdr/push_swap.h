@@ -6,7 +6,7 @@
 /*   By: joelozan <joelozan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 19:54:15 by joelozan          #+#    #+#             */
-/*   Updated: 2024/04/18 20:18:37 by joelozan         ###   ########.fr       */
+/*   Updated: 2024/05/07 21:32:27 by joelozan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int		ft_isdigit(int n);
 char	**ft_split(const char *s, char c);
 void	ft_putendl_fd(char *s, int fd);
 int		ft_lstsize(t_stack *lst);
-int		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 t_stack	*ft_lstnew(int content);
 void	ft_lstadd_back(t_stack **lst, t_stack *new);
 t_stack	*ft_lstlast(t_stack *lst);

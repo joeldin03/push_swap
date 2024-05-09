@@ -6,7 +6,7 @@
 /*   By: joelozan <joelozan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:53:24 by joelozan          #+#    #+#             */
-/*   Updated: 2024/04/18 19:59:27 by joelozan         ###   ########.fr       */
+/*   Updated: 2024/05/07 21:33:28 by joelozan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	check_args(int ac, char **av)
 			ft_error("Error");
 		if (is_dup(tmp, args, i))
 			ft_error("Error");
-		if (tmp < -2147483648 || tmp > 2147483647)
+		if (tmp < -2147483648 || tmp > (long)2147483647)
 			ft_error("Error");
 		i++;
 	}
