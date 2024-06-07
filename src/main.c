@@ -76,6 +76,20 @@ static void	set_stack(t_stack **stack, int argc, char **argv)
 		ft_free(args);
 }
 
+static void	free_stack(t_stack **stack)
+{
+	t_stack	*tmp;
+
+	tmp = *stack;
+	while (tmp != NULL)
+	{
+		tmp = tmp->next;
+		free(*stack);
+		*stack = tmp;
+	}
+	free(stack);
+}
+
 int	main(int ac, char **av)
 {
 	t_stack	**stack_a;
@@ -91,12 +105,12 @@ int	main(int ac, char **av)
 	set_stack(stack_a, ac, av);
 	if (is_sorted(stack_a))
 	{
-		free(stack_a);
-		free(stack_b);
+		free_stack(stack_a);
+		free_stack(stack_b);
 		return (0);
 	}
 	sort_stack(stack_a, stack_b);
-	free(stack_a);
-	free(stack_b);
+	free_stack(stack_a);
+	free_stack(stack_b);
 	return (0);
 }

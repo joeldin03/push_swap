@@ -111,14 +111,14 @@ char	**ft_split(const char *s, char c)
 
 	if (!s)
 	{
-		array = malloc(sizeof(char));
+		array = malloc(sizeof(char *));
 		if (!array)
 			return (0);
 		*array = NULL;
 		return (array);
 	}
 	wordcount = count_words(s, c);
-	array = malloc(sizeof(*array) * (wordcount + 1));
+	array = malloc(sizeof(char *) * (wordcount + 1));
 	if (!array)
 		return (0);
 	if (subarr(array, s, c))
